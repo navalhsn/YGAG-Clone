@@ -10,6 +10,9 @@
 		51B922CF27D51E4A00FA3568 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 51B922CE27D51E4A00FA3568 /* NVActivityIndicatorView */; };
 		51B922D127D51E4A00FA3568 /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = 51B922D027D51E4A00FA3568 /* NVActivityIndicatorViewExtended */; };
 		51B922D527D5CE5700FA3568 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B922D427D5CE5700FA3568 /* BaseViewController.swift */; };
+		51B922D727D5F3B300FA3568 /* HomeViewUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B922D627D5F3B300FA3568 /* HomeViewUnitTests.swift */; };
+		51B922D927D60ABB00FA3568 /* HomeViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B922D827D60ABB00FA3568 /* HomeViewUITests.swift */; };
+		51CB9C6827D62DB6009966AE /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CB9C6727D62DB6009966AE /* UIDevice+Extension.swift */; };
 		51D3770C27D4AD2200105C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D3770B27D4AD2200105C61 /* AppDelegate.swift */; };
 		51D3770E27D4AD2200105C61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D3770D27D4AD2200105C61 /* SceneDelegate.swift */; };
 		51D3771327D4AD2200105C61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51D3771127D4AD2200105C61 /* Main.storyboard */; };
@@ -55,6 +58,9 @@
 
 /* Begin PBXFileReference section */
 		51B922D427D5CE5700FA3568 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		51B922D627D5F3B300FA3568 /* HomeViewUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewUnitTests.swift; sourceTree = "<group>"; };
+		51B922D827D60ABB00FA3568 /* HomeViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewUITests.swift; sourceTree = "<group>"; };
+		51CB9C6727D62DB6009966AE /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		51D3770827D4AD2200105C61 /* YouGotAGiftClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouGotAGiftClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51D3770B27D4AD2200105C61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51D3770D27D4AD2200105C61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +159,7 @@
 		51D3772127D4AD2300105C61 /* YouGotAGiftCloneTests */ = {
 			isa = PBXGroup;
 			children = (
+				51B922D627D5F3B300FA3568 /* HomeViewUnitTests.swift */,
 				51D3772227D4AD2300105C61 /* YouGotAGiftCloneTests.swift */,
 			);
 			path = YouGotAGiftCloneTests;
@@ -161,6 +168,7 @@
 		51D3772B27D4AD2300105C61 /* YouGotAGiftCloneUITests */ = {
 			isa = PBXGroup;
 			children = (
+				51B922D827D60ABB00FA3568 /* HomeViewUITests.swift */,
 				51D3772C27D4AD2300105C61 /* YouGotAGiftCloneUITests.swift */,
 				51D3772E27D4AD2300105C61 /* YouGotAGiftCloneUITestsLaunchTests.swift */,
 			);
@@ -174,6 +182,7 @@
 				51D3775F27D4BCB800105C61 /* UIColor+Extension.swift */,
 				51D3776127D4C04C00105C61 /* UIImageView+Extension.swift */,
 				51D3776327D4D3A100105C61 /* UIScrollView+Extension.swift */,
+				51CB9C6727D62DB6009966AE /* UIDevice+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -420,6 +429,7 @@
 				51D3774A27D4AE2F00105C61 /* FeaturedProductsModel.swift in Sources */,
 				51D3770C27D4AD2200105C61 /* AppDelegate.swift in Sources */,
 				51D3773D27D4AD5600105C61 /* UIView+Extension.swift in Sources */,
+				51CB9C6827D62DB6009966AE /* UIDevice+Extension.swift in Sources */,
 				51D3774027D4AD8100105C61 /* Common.swift in Sources */,
 				51D3776027D4BCB800105C61 /* UIColor+Extension.swift in Sources */,
 				51D3774E27D4AE6900105C61 /* HomeViewConroller.swift in Sources */,
@@ -432,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51D3772327D4AD2300105C61 /* YouGotAGiftCloneTests.swift in Sources */,
+				51B922D727D5F3B300FA3568 /* HomeViewUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +452,7 @@
 			files = (
 				51D3772D27D4AD2300105C61 /* YouGotAGiftCloneUITests.swift in Sources */,
 				51D3772F27D4AD2300105C61 /* YouGotAGiftCloneUITestsLaunchTests.swift in Sources */,
+				51B922D927D60ABB00FA3568 /* HomeViewUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

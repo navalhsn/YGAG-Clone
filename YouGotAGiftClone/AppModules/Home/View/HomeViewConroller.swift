@@ -28,15 +28,15 @@ class HomeViewController: BaseViewController {
     }
     
     //#MARK: Declarations
-    private var homeViewModel: HomeViewModel = HomeViewModel()
+    var homeViewModel: HomeViewModel = HomeViewModel()
     var featuredProductsModel: FeaturedProductsModel?
+    var brandsModel = [Brand](), paginationUrl = ""
     var selectedCategoryIndex: Int = Int()
     
     //#MARK: VCLC
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUIElements()
-        
         // pass customerId as nil when calling this api to get categories
         // categoryIndex is passed as 0 index data is being shown at first luanch
         handleGetFeaturedProducts(customerId: nil, categoryIndex: 0)
@@ -44,23 +44,50 @@ class HomeViewController: BaseViewController {
     
     //#MARK: API Functions
     func handleGetFeaturedProducts(customerId: String?, categoryIndex: Int) {
-        activityIndicator.startAnimating()
-        homeViewModel.getFeaturedProducts(customerId: customerId, { response in
+        self.startLoader()
+        homeViewModel.getFeaturedProducts(paginationApi: &paginationUrl, customerId: customerId, { response in
             self.featuredProductsModel = response
+            if let paginationUrl = response.paginatedData?.next {
+                self.paginationUrl = paginationUrl
+            } else {
+                self.paginationUrl = Constants.paginationEndText
+            }
+            
+            self.setupBrands(brandsResponse: response.brands ?? [])
+            
             DispatchQueue.main.async {
                 self.categoryImageView.kf.setImage(with: URL(string: response.categories?[categoryIndex].imageLarge ?? ""))
                 self.categoryTitleLabel.text = response.categories?[categoryIndex].name ?? ""
                 self.categoryLargeTitleLabel.text = response.categories?[categoryIndex].title ?? ""
-                self.featuredProductsCollectionView.reloadData()
                 self.categoriesCollectionView.reloadData()
-                self.activityIndicator.stopAnimating()
+                self.stopLoader()
             }
         })
     }
     
+    //#MARK: Other Functions
+    func setupBrands(brandsResponse: [Brand]) {
+        if !activityIndicator.isAnimating {
+            startLoader()
+        }
+        for i in brandsResponse {
+            self.brandsModel.append(i)
+        }
+        DispatchQueue.main.async {
+            self.featuredProductsCollectionView.reloadData()
+            self.stopLoader()
+        }
+    }
+    
     func setupUIElements() {
         // configure scrollview in a way that it should only scroll till category collection reach at top
-        containerViewHeight.constant = self.view.frame.size.height + 140
+        let screenType = UIDevice().screenType
+        // for devices that having notch, view height is greater than devices without notch
+        if screenType == .iPhones_6_6s_7_8 || screenType == .iPhones_5_5s_5c_SE || screenType == .iPhones_6Plus_6sPlus_7Plus_8Plus {
+            containerViewHeight.constant = self.view.bounds.size.height + 140
+        } else {
+            containerViewHeight.constant = self.view.frame.size.height + 80
+        }
         // featuredProductsCollectionView should be scrollable only after homeScrollview reach at top
         featuredProductsCollectionView.isScrollEnabled = false
     }

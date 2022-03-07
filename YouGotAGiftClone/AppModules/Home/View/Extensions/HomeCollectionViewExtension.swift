@@ -13,7 +13,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if collectionView == categoriesCollectionView {
             return featuredProductsModel?.categories?.count ?? 0
         } else {
-            return featuredProductsModel?.brands?.count ?? 0
+            return brandsModel.count
         }
     }
     
@@ -35,7 +35,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeBrandsCollectionViewCell", for: indexPath) as! HomeBrandsCollectionViewCell
-            guard let dataAtIndex = featuredProductsModel?.brands?[indexPath.item] else { return cell }
+            let dataAtIndex = brandsModel[indexPath.item]
             cell.productNameLabel.text = dataAtIndex.name ?? ""
             cell.productDescreptionLabel.text = dataAtIndex.shortTagline ?? ""
             cell.productImageView.kf.setImage(with: URL(string: dataAtIndex.productImage ?? ""))
@@ -51,11 +51,12 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == categoriesCollectionView {
+            collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+            brandsModel = []
+            paginationUrl = ""
             selectedCategoryIndex = indexPath.item
             guard let dataAtIndex = featuredProductsModel?.categories?[indexPath.item] else { return }
-            handleGetFeaturedProducts(customerId: String(dataAtIndex.id ?? 0), categoryIndex: indexPath.item)
-        } else {
-            
+            handleGetFeaturedProducts(customerId: String(dataAtIndex.id ?? 0), categoryIndex: selectedCategoryIndex)
         }
     }
     

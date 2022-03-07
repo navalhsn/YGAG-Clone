@@ -19,6 +19,7 @@ extension HomeViewController: UIScrollViewDelegate {
 //    }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // handle view + collection scroll
         if homeScrollView.isAtBottom {
             featuredProductsCollectionView.isScrollEnabled = true
         } else if featuredProductsCollectionView.isAtTop == false {
@@ -27,6 +28,12 @@ extension HomeViewController: UIScrollViewDelegate {
             featuredProductsCollectionView.isScrollEnabled = false
         }
         
+        // handle pagination
+        if featuredProductsCollectionView.isAtBottom {
+            if paginationUrl != Constants.paginationEndText {
+                handleGetFeaturedProducts(customerId: nil, categoryIndex: selectedCategoryIndex)
+            }
+        }
     }
 }
 

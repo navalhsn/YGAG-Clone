@@ -12,18 +12,22 @@ struct HomeViewModel {
     let networkManager = NetworkManager()
     
     // API calls
-    func getFeaturedProducts(customerId: String?, _ completionHandler: @escaping (FeaturedProductsModel) -> Void) {
+    func getFeaturedProducts( paginationApi: inout String, customerId: String?, _ completionHandler: @escaping (FeaturedProductsModel) -> Void) {
         
         var urlPath: String = String()
-        // when calling this api for getting catogeries, "&category" is not appended with string
-        // when calling this api to get products w.r.t "customerId", urlPath is appended with "&category"
-        if let customerId = customerId {
-            urlPath = "/?api_key=\(networkManager.apiKey)&api_secret=\(networkManager.apiSecretKey)&category=\(customerId)"
-        } else {
-            urlPath = "/?api_key=\(networkManager.apiKey)&api_secret=\(networkManager.apiSecretKey)"
+        // paginationApi will be "" when the api is called for the first time or when category is changed
+        if paginationApi == "" {
+            // when calling this api for getting catogeries, "&category" is not appended with string
+            // when calling this api to get products w.r.t "customerId", urlPath is appended with "&category"
+            if let customerId = customerId {
+                urlPath = "/?api_key=\(networkManager.apiKey)&api_secret=\(networkManager.apiSecretKey)&category=\(customerId)"
+            } else {
+                urlPath = "/?api_key=\(networkManager.apiKey)&api_secret=\(networkManager.apiSecretKey)"
+            }
+            paginationApi = ApiEndpoints.featuredProductsUrl + urlPath
         }
-        guard let featuredProductsUrl = URL(string: ApiEndpoints.featuredProductsUrl + urlPath) else { return }
-        networkManager.getApiData(requestUrl: featuredProductsUrl, resultType: FeaturedProductsModel.self) { response in
+        guard let url = URL(string: paginationApi) else { return }
+        networkManager.getApiData(requestUrl: url, resultType: FeaturedProductsModel.self) { response in
             completionHandler(response)
         }
     }

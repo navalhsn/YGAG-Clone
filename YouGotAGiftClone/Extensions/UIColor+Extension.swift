@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension UIColor {
-    // This extension is for using UIColor with hex values
+    // This extension is used for using UIColor with hex values
     // Usage:
     // UIColor("#ff0000") // with #
     // UIColor("ff0000")  // without #

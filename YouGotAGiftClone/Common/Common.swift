@@ -8,9 +8,9 @@
 import Foundation
 
 struct Constants {
-    static let ErrorAlertTitle = "Error"
-    static let OkAlertTitle = "Ok"
-    static let CancelAlertTitle = "Cancel"
+    // Home
+    static let howItWorksText = "How it works"
+    static let paginationEndText = "end"
 }
 
 struct ApiEndpoints {
@@ -18,6 +18,10 @@ struct ApiEndpoints {
 }
 
 struct ColorValues {
+    // General
+    static let activityIndicatorColor = "#9E3786"
+    // Home
     static let homeCategoryCollectionCellSelectionColor = "#53338A"
     static let homeCategoryCollectionArrowColor = "#F2F3F1"
+    
 }
