@@ -7,15 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51B922CF27D51E4A00FA3568 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 51B922CE27D51E4A00FA3568 /* NVActivityIndicatorView */; };
+		51B922D127D51E4A00FA3568 /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = 51B922D027D51E4A00FA3568 /* NVActivityIndicatorViewExtended */; };
+		51B922D527D5CE5700FA3568 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B922D427D5CE5700FA3568 /* BaseViewController.swift */; };
 		51D3770C27D4AD2200105C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D3770B27D4AD2200105C61 /* AppDelegate.swift */; };
 		51D3770E27D4AD2200105C61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D3770D27D4AD2200105C61 /* SceneDelegate.swift */; };
-		51D3771027D4AD2200105C61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D3770F27D4AD2200105C61 /* ViewController.swift */; };
 		51D3771327D4AD2200105C61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51D3771127D4AD2200105C61 /* Main.storyboard */; };
 		51D3771527D4AD2300105C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51D3771427D4AD2300105C61 /* Assets.xcassets */; };
 		51D3771827D4AD2300105C61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51D3771627D4AD2300105C61 /* LaunchScreen.storyboard */; };
 		51D3772327D4AD2300105C61 /* YouGotAGiftCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D3772227D4AD2300105C61 /* YouGotAGiftCloneTests.swift */; };
 		51D3772D27D4AD2300105C61 /* YouGotAGiftCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D3772C27D4AD2300105C61 /* YouGotAGiftCloneUITests.swift */; };
 		51D3772F27D4AD2300105C61 /* YouGotAGiftCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D3772E27D4AD2300105C61 /* YouGotAGiftCloneUITestsLaunchTests.swift */; };
+		51D3773D27D4AD5600105C61 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D3773C27D4AD5600105C61 /* UIView+Extension.swift */; };
+		51D3774027D4AD8100105C61 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D3773F27D4AD8100105C61 /* Common.swift */; };
+		51D3774327D4ADC200105C61 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D3774227D4ADC200105C61 /* NetworkManager.swift */; };
+		51D3774A27D4AE2F00105C61 /* FeaturedProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D3774927D4AE2F00105C61 /* FeaturedProductsModel.swift */; };
+		51D3774C27D4AE4A00105C61 /* FeaturedProductsRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D3774B27D4AE4A00105C61 /* FeaturedProductsRequestModel.swift */; };
+		51D3774E27D4AE6900105C61 /* HomeViewConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D3774D27D4AE6900105C61 /* HomeViewConroller.swift */; };
+		51D3775127D4AE9800105C61 /* HomeCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D3775027D4AE9800105C61 /* HomeCategoriesCollectionViewCell.swift */; };
+		51D3775327D4AEAC00105C61 /* HomeBrandsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D3775227D4AEAC00105C61 /* HomeBrandsCollectionViewCell.swift */; };
+		51D3775527D4AED100105C61 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D3775427D4AED100105C61 /* HomeViewModel.swift */; };
+		51D3775827D4AF0600105C61 /* Home.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51D3775727D4AF0600105C61 /* Home.xcassets */; };
+		51D3775B27D4AF8900105C61 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 51D3775A27D4AF8900105C61 /* Kingfisher */; };
+		51D3775E27D4B19E00105C61 /* HomeCollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D3775D27D4B19E00105C61 /* HomeCollectionViewExtension.swift */; };
+		51D3776027D4BCB800105C61 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D3775F27D4BCB800105C61 /* UIColor+Extension.swift */; };
+		51D3776227D4C04C00105C61 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D3776127D4C04C00105C61 /* UIImageView+Extension.swift */; };
+		51D3776427D4D3A100105C61 /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D3776327D4D3A100105C61 /* UIScrollView+Extension.swift */; };
+		51D3776627D4D47D00105C61 /* HomeScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D3776527D4D47D00105C61 /* HomeScrollViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +54,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51B922D427D5CE5700FA3568 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		51D3770827D4AD2200105C61 /* YouGotAGiftClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouGotAGiftClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51D3770B27D4AD2200105C61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51D3770D27D4AD2200105C61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		51D3770F27D4AD2200105C61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		51D3771227D4AD2200105C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		51D3771427D4AD2300105C61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51D3771727D4AD2300105C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +67,21 @@
 		51D3772827D4AD2300105C61 /* YouGotAGiftCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YouGotAGiftCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		51D3772C27D4AD2300105C61 /* YouGotAGiftCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouGotAGiftCloneUITests.swift; sourceTree = "<group>"; };
 		51D3772E27D4AD2300105C61 /* YouGotAGiftCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouGotAGiftCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		51D3773C27D4AD5600105C61 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		51D3773F27D4AD8100105C61 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		51D3774227D4ADC200105C61 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		51D3774927D4AE2F00105C61 /* FeaturedProductsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedProductsModel.swift; sourceTree = "<group>"; };
+		51D3774B27D4AE4A00105C61 /* FeaturedProductsRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedProductsRequestModel.swift; sourceTree = "<group>"; };
+		51D3774D27D4AE6900105C61 /* HomeViewConroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewConroller.swift; sourceTree = "<group>"; };
+		51D3775027D4AE9800105C61 /* HomeCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		51D3775227D4AEAC00105C61 /* HomeBrandsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBrandsCollectionViewCell.swift; sourceTree = "<group>"; };
+		51D3775427D4AED100105C61 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		51D3775727D4AF0600105C61 /* Home.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Home.xcassets; sourceTree = "<group>"; };
+		51D3775D27D4B19E00105C61 /* HomeCollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewExtension.swift; sourceTree = "<group>"; };
+		51D3775F27D4BCB800105C61 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		51D3776127D4C04C00105C61 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		51D3776327D4D3A100105C61 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
+		51D3776527D4D47D00105C61 /* HomeScrollViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScrollViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +89,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51B922D127D51E4A00FA3568 /* NVActivityIndicatorViewExtended in Frameworks */,
+				51B922CF27D51E4A00FA3568 /* NVActivityIndicatorView in Frameworks */,
+				51D3775B27D4AF8900105C61 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,9 +135,13 @@
 		51D3770A27D4AD2200105C61 /* YouGotAGiftClone */ = {
 			isa = PBXGroup;
 			children = (
+				51D3773E27D4AD7300105C61 /* Common */,
+				51D3773B27D4AD3B00105C61 /* Extensions */,
+				51D3774127D4ADA900105C61 /* Services */,
+				51D3774427D4ADED00105C61 /* AppModules */,
+				51D3775627D4AEEF00105C61 /* Assets */,
 				51D3770B27D4AD2200105C61 /* AppDelegate.swift */,
 				51D3770D27D4AD2200105C61 /* SceneDelegate.swift */,
-				51D3770F27D4AD2200105C61 /* ViewController.swift */,
 				51D3771127D4AD2200105C61 /* Main.storyboard */,
 				51D3771427D4AD2300105C61 /* Assets.xcassets */,
 				51D3771627D4AD2300105C61 /* LaunchScreen.storyboard */,
@@ -127,6 +167,105 @@
 			path = YouGotAGiftCloneUITests;
 			sourceTree = "<group>";
 		};
+		51D3773B27D4AD3B00105C61 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				51D3773C27D4AD5600105C61 /* UIView+Extension.swift */,
+				51D3775F27D4BCB800105C61 /* UIColor+Extension.swift */,
+				51D3776127D4C04C00105C61 /* UIImageView+Extension.swift */,
+				51D3776327D4D3A100105C61 /* UIScrollView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		51D3773E27D4AD7300105C61 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				51D3773F27D4AD8100105C61 /* Common.swift */,
+				51B922D427D5CE5700FA3568 /* BaseViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		51D3774127D4ADA900105C61 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				51D3774227D4ADC200105C61 /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		51D3774427D4ADED00105C61 /* AppModules */ = {
+			isa = PBXGroup;
+			children = (
+				51D3774527D4ADFE00105C61 /* Home */,
+			);
+			path = AppModules;
+			sourceTree = "<group>";
+		};
+		51D3774527D4ADFE00105C61 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				51D3774627D4AE0700105C61 /* Model */,
+				51D3774827D4AE1500105C61 /* View */,
+				51D3774727D4AE0C00105C61 /* ViewModel */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		51D3774627D4AE0700105C61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				51D3774927D4AE2F00105C61 /* FeaturedProductsModel.swift */,
+				51D3774B27D4AE4A00105C61 /* FeaturedProductsRequestModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		51D3774727D4AE0C00105C61 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				51D3775427D4AED100105C61 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		51D3774827D4AE1500105C61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				51D3775C27D4B18500105C61 /* Extensions */,
+				51D3774F27D4AE7E00105C61 /* Cells */,
+				51D3774D27D4AE6900105C61 /* HomeViewConroller.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		51D3774F27D4AE7E00105C61 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				51D3775027D4AE9800105C61 /* HomeCategoriesCollectionViewCell.swift */,
+				51D3775227D4AEAC00105C61 /* HomeBrandsCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		51D3775627D4AEEF00105C61 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				51D3775727D4AF0600105C61 /* Home.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		51D3775C27D4B18500105C61 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				51D3775D27D4B19E00105C61 /* HomeCollectionViewExtension.swift */,
+				51D3776527D4D47D00105C61 /* HomeScrollViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +282,11 @@
 			dependencies = (
 			);
 			name = YouGotAGiftClone;
+			packageProductDependencies = (
+				51D3775A27D4AF8900105C61 /* Kingfisher */,
+				51B922CE27D51E4A00FA3568 /* NVActivityIndicatorView */,
+				51B922D027D51E4A00FA3568 /* NVActivityIndicatorViewExtended */,
+			);
 			productName = YouGotAGiftClone;
 			productReference = 51D3770827D4AD2200105C61 /* YouGotAGiftClone.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +359,10 @@
 				Base,
 			);
 			mainGroup = 51D376FF27D4AD2100105C61;
+			packageReferences = (
+				51D3775927D4AF8900105C61 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				51B922CD27D51E4A00FA3568 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+			);
 			productRefGroup = 51D3770927D4AD2200105C61 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +381,7 @@
 			files = (
 				51D3771827D4AD2300105C61 /* LaunchScreen.storyboard in Resources */,
 				51D3771527D4AD2300105C61 /* Assets.xcassets in Resources */,
+				51D3775827D4AF0600105C61 /* Home.xcassets in Resources */,
 				51D3771327D4AD2200105C61 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,8 +407,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51D3771027D4AD2200105C61 /* ViewController.swift in Sources */,
+				51D3775E27D4B19E00105C61 /* HomeCollectionViewExtension.swift in Sources */,
+				51D3775127D4AE9800105C61 /* HomeCategoriesCollectionViewCell.swift in Sources */,
+				51D3776227D4C04C00105C61 /* UIImageView+Extension.swift in Sources */,
+				51D3775527D4AED100105C61 /* HomeViewModel.swift in Sources */,
+				51B922D527D5CE5700FA3568 /* BaseViewController.swift in Sources */,
+				51D3776427D4D3A100105C61 /* UIScrollView+Extension.swift in Sources */,
+				51D3774327D4ADC200105C61 /* NetworkManager.swift in Sources */,
+				51D3774C27D4AE4A00105C61 /* FeaturedProductsRequestModel.swift in Sources */,
+				51D3775327D4AEAC00105C61 /* HomeBrandsCollectionViewCell.swift in Sources */,
+				51D3776627D4D47D00105C61 /* HomeScrollViewExtension.swift in Sources */,
+				51D3774A27D4AE2F00105C61 /* FeaturedProductsModel.swift in Sources */,
 				51D3770C27D4AD2200105C61 /* AppDelegate.swift in Sources */,
+				51D3773D27D4AD5600105C61 /* UIView+Extension.swift in Sources */,
+				51D3774027D4AD8100105C61 /* Common.swift in Sources */,
+				51D3776027D4BCB800105C61 /* UIColor+Extension.swift in Sources */,
+				51D3774E27D4AE6900105C61 /* HomeViewConroller.swift in Sources */,
 				51D3770E27D4AD2200105C61 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -604,6 +767,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		51B922CD27D51E4A00FA3568 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		51D3775927D4AF8900105C61 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		51B922CE27D51E4A00FA3568 /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51B922CD27D51E4A00FA3568 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
+		};
+		51B922D027D51E4A00FA3568 /* NVActivityIndicatorViewExtended */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51B922CD27D51E4A00FA3568 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorViewExtended;
+		};
+		51D3775A27D4AF8900105C61 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51D3775927D4AF8900105C61 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 51D3770027D4AD2100105C61 /* Project object */;
 }
