@@ -10,6 +10,7 @@ import UIKit
 
 extension UIScrollView {
     // check scrollview position
+    // usage: scrollView.isAtTop
     var isAtTop: Bool {
         return contentOffset.y <= verticalOffsetForTop
     }
