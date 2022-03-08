@@ -23,5 +23,10 @@ struct ColorValues {
     // Home
     static let homeCategoryCollectionCellSelectionColor = "#53338A"
     static let homeCategoryCollectionArrowColor = "#F2F3F1"
-    
+}
+
+struct cellIdentifiers {
+    // Home
+    static let homeCategoryCollectionCellIdentifier = "HomeCategoriesCollectionViewCell"
+    static let homebrandsCollectionCellIdentifier = "HomeBrandsCollectionViewCell"
 }

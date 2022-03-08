@@ -12,15 +12,15 @@ struct HomeViewModel {
     let networkManager = NetworkManager()
     
     // API calls
-    func getFeaturedProducts( paginationApi: inout String, customerId: String?, _ completionHandler: @escaping (FeaturedProductsModel) -> Void) {
+    func getFeaturedProducts( paginationApi: inout String, categoryId: String?, _ completionHandler: @escaping (FeaturedProductsModel) -> Void) {
         
         var urlPath: String = String()
         // paginationApi will be "" when the api is called for the first time or when category is changed
         if paginationApi == "" {
             // when calling this api for getting catogeries, "&category" is not appended with string
-            // when calling this api to get products w.r.t "customerId", urlPath is appended with "&category"
-            if let customerId = customerId {
-                urlPath = "/?api_key=\(networkManager.apiKey)&api_secret=\(networkManager.apiSecretKey)&category=\(customerId)"
+            // when calling this api to get products w.r.t "categoryId", urlPath is appended with "&category"
+            if let categoryId = categoryId {
+                urlPath = "/?api_key=\(networkManager.apiKey)&api_secret=\(networkManager.apiSecretKey)&category=\(categoryId)"
             } else {
                 urlPath = "/?api_key=\(networkManager.apiKey)&api_secret=\(networkManager.apiSecretKey)"
             }

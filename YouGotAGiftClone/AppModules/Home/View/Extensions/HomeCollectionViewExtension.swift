@@ -19,7 +19,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == categoriesCollectionView {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCategoriesCollectionViewCell", for: indexPath) as! HomeCategoriesCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifiers.homeCategoryCollectionCellIdentifier, for: indexPath) as! HomeCategoriesCollectionViewCell
             guard let dataAtIndex = featuredProductsModel?.categories?[indexPath.item] else { return cell }
             cell.titleLabel.text = dataAtIndex.name ?? ""
 
@@ -34,16 +34,19 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             }
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeBrandsCollectionViewCell", for: indexPath) as! HomeBrandsCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifiers.homebrandsCollectionCellIdentifier, for: indexPath) as! HomeBrandsCollectionViewCell
+            if brandsModel.count == 0 { return cell}
             let dataAtIndex = brandsModel[indexPath.item]
             cell.productNameLabel.text = dataAtIndex.name ?? ""
             cell.productDescreptionLabel.text = dataAtIndex.shortTagline ?? ""
             cell.productImageView.kf.setImage(with: URL(string: dataAtIndex.productImage ?? ""))
             if let redemptionTag = dataAtIndex.redemptionTag {
-                cell.redemptionTagLabel.text = redemptionTag
+                cell.redemptionTagLabel.text = " \(redemptionTag) "
                 cell.redemptionTagLabel.textColor = .purple
+                cell.redemptionTagLabel.addBorder(cornerRadius: 7, borderColor: .purple)
             } else {
                 cell.redemptionTagLabel.text = ""
+                cell.redemptionTagLabel.addBorder(cornerRadius: 7, borderColor: .clear)
             }
             return cell
         }
@@ -51,12 +54,14 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == categoriesCollectionView {
-            collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+            categoriesCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+            featuredProductsCollectionView.setContentOffset(.zero, animated: true)
+            homeScrollView.setContentOffset(.zero, animated: true)
             brandsModel = []
             paginationUrl = ""
             selectedCategoryIndex = indexPath.item
             guard let dataAtIndex = featuredProductsModel?.categories?[indexPath.item] else { return }
-            handleGetFeaturedProducts(customerId: String(dataAtIndex.id ?? 0), categoryIndex: selectedCategoryIndex)
+            handleGetFeaturedProducts(categoryId: String(dataAtIndex.id ?? 0), categoryIndex: selectedCategoryIndex)
         }
     }
     

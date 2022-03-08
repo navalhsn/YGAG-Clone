@@ -14,7 +14,7 @@ class HomeViewUnitTests: XCTestCase {
     
     func test_getFeaturedProducts_as_pagination_emptystring() {
         var paginationString = ""
-        sut.getFeaturedProducts(paginationApi: &paginationString, customerId: nil, {
+        sut.getFeaturedProducts(paginationApi: &paginationString, categoryId: nil, {
             response in
             // confirming necessary data are not nil
             XCTAssertNotNil(response)
@@ -26,15 +26,23 @@ class HomeViewUnitTests: XCTestCase {
         })
     }
     
-    func test_getFeaturedProducts_as_customerId_not_nil() {
+    func test_getFeaturedProducts_as_categoryId_not_nil() {
         var paginationString = ""
-        sut.getFeaturedProducts(paginationApi: &paginationString, customerId: "32", {
+        sut.getFeaturedProducts(paginationApi: &paginationString, categoryId: "32", {
             response in
             // confirming necessary data are not nil
             XCTAssertNotNil(response)
             XCTAssertNotNil(response.paginatedData)
             // categories should not be nil
             XCTAssertNotNil(response.categories)
+        })
+    }
+    
+    func test_getFeaturedProducts_with_wrongPaginationString_responseShouldBeNil() {
+        var paginationString = "wrongInput"
+        sut.getFeaturedProducts(paginationApi: &paginationString, categoryId: "32", {
+            response in
+            XCTAssertNil(response)
         })
     }
 

@@ -106,6 +106,9 @@
                                                                     </constraints>
                                                                 </collectionViewCellContentView>
                                                                 <size key="customSize" width="144" height="95"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="categoryCollection"/>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <outlet property="arrowImageView" destination="TnA-Z6-a8v" id="8P8-Gv-eux"/>
                                                                     <outlet property="bgImageView" destination="aMR-Wl-xHo" id="Iqr-DT-q3x"/>
@@ -152,21 +155,9 @@
                                                                                 <constraint firstAttribute="height" constant="14" id="Zsd-pZ-dV3"/>
                                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="cMB-H5-brf"/>
                                                                             </constraints>
-                                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="7"/>
+                                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="6"/>
                                                                             <color key="textColor" systemColor="systemPurpleColor"/>
                                                                             <nil key="highlightedColor"/>
-                                                                            <userDefinedRuntimeAttributes>
-                                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                                    <integer key="value" value="7"/>
-                                                                                </userDefinedRuntimeAttribute>
-                                                                                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                                                                    <color key="value" systemColor="systemPurpleColor"/>
-                                                                                </userDefinedRuntimeAttribute>
-                                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                                                    <integer key="value" value="1"/>
-                                                                                </userDefinedRuntimeAttribute>
-                                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                                                            </userDefinedRuntimeAttributes>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INR" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJd-CN-ajR">
                                                                             <rect key="frame" x="175" y="8" width="30" height="14"/>
@@ -291,6 +282,7 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWp-wK-BvO">
                                                         <rect key="frame" x="152" y="133.5" width="110" height="29"/>
+                                                        <accessibility key="accessibilityConfiguration" label="HowItWorksId"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="29" id="5Sl-eE-vlJ"/>
                                                             <constraint firstAttribute="width" constant="110" id="oZ6-CL-HMi"/>

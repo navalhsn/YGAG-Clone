@@ -25,6 +25,7 @@ class HomeViewUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+    
     func test_categoryTitle_shouldMatch_MainTitle() throws {
         let app = XCUIApplication()
         app.launch()
@@ -35,12 +36,22 @@ class HomeViewUITests: XCTestCase {
             let mainTitle = app.scrollViews.children(matching: .other).element.children(matching: .other).element(boundBy: 1).staticTexts["mainTitleId"]
             XCTAssertEqual(categoryTitle, mainTitle)
         }
+        
+        let secondChild = app.collectionViews.children(matching:.any).element(boundBy: 1)
+        if secondChild.exists {
+            let categoryTitle = secondChild.staticTexts["categoryLabelId"]
+            let mainTitle = app.scrollViews.children(matching: .other).element.children(matching: .other).element(boundBy: 1).staticTexts["mainTitleId"]
+            XCTAssertEqual(categoryTitle, mainTitle)
+        }
     }
     
-    func test_howItWorks_ButtonTitle_ShouldMatch_theText() throws {
+    func test_howItWorks_ButtonShouldExist() throws {
         let app = XCUIApplication()
         app.launch()
-        app.scrollViews.otherElements/*@START_MENU_TOKEN@*/.staticTexts["How it works"]/*[[".buttons[\"How it works\"].staticTexts[\"How it works\"]",".staticTexts[\"How it works\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
+        XCTAssertTrue(app.scrollViews.otherElements/*@START_MENU_TOKEN@*/.buttons["HowItWorksId"].staticTexts["How it works"]/*[[".buttons[\"HowItWorksId\"].staticTexts[\"How it works\"]",".staticTexts[\"How it works\"]"],[[[-1,1],[-1,0]]],[1]]@END_MENU_TOKEN@*/.exists)
+        
     }
+
 
 }

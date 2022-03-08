@@ -37,15 +37,15 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUIElements()
-        // pass customerId as nil when calling this api to get categories
+        // pass categoryId as nil when calling this api to get categories
         // categoryIndex is passed as 0 index data is being shown at first luanch
-        handleGetFeaturedProducts(customerId: nil, categoryIndex: 0)
+        handleGetFeaturedProducts(categoryId: nil, categoryIndex: 0)
     }
     
     //#MARK: API Functions
-    func handleGetFeaturedProducts(customerId: String?, categoryIndex: Int) {
+    func handleGetFeaturedProducts(categoryId: String?, categoryIndex: Int) {
         self.startLoader()
-        homeViewModel.getFeaturedProducts(paginationApi: &paginationUrl, customerId: customerId, { response in
+        homeViewModel.getFeaturedProducts(paginationApi: &paginationUrl, categoryId: categoryId, { response in
             self.featuredProductsModel = response
             if let paginationUrl = response.paginatedData?.next {
                 self.paginationUrl = paginationUrl
@@ -67,15 +67,11 @@ class HomeViewController: BaseViewController {
     
     //#MARK: Other Functions
     func setupBrands(brandsResponse: [Brand]) {
-        if !activityIndicator.isAnimating {
-            startLoader()
-        }
         for i in brandsResponse {
             self.brandsModel.append(i)
         }
         DispatchQueue.main.async {
             self.featuredProductsCollectionView.reloadData()
-            self.stopLoader()
         }
     }
     
